@@ -10,33 +10,91 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AquaGuardServiceLudhianaRouteImport } from './routes/aqua-guard-service-ludhiana'
+import { Route as AreasRouteImport } from './routes/areas'
+import { Route as RoRepairLudhianaRouteImport } from './routes/ro-repair-ludhiana'
+import { Route as WaterPurifierServiceLudhianaRouteImport } from './routes/water-purifier-service-ludhiana'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AquaGuardServiceLudhianaRoute =
+  AquaGuardServiceLudhianaRouteImport.update({
+    id: '/aqua-guard-service-ludhiana',
+    path: '/aqua-guard-service-ludhiana',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AreasRoute = AreasRouteImport.update({
+  id: '/areas',
+  path: '/areas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoRepairLudhianaRoute = RoRepairLudhianaRouteImport.update({
+  id: '/ro-repair-ludhiana',
+  path: '/ro-repair-ludhiana',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WaterPurifierServiceLudhianaRoute =
+  WaterPurifierServiceLudhianaRouteImport.update({
+    id: '/water-purifier-service-ludhiana',
+    path: '/water-purifier-service-ludhiana',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aqua-guard-service-ludhiana': typeof AquaGuardServiceLudhianaRoute
+  '/areas': typeof AreasRoute
+  '/ro-repair-ludhiana': typeof RoRepairLudhianaRoute
+  '/water-purifier-service-ludhiana': typeof WaterPurifierServiceLudhianaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aqua-guard-service-ludhiana': typeof AquaGuardServiceLudhianaRoute
+  '/areas': typeof AreasRoute
+  '/ro-repair-ludhiana': typeof RoRepairLudhianaRoute
+  '/water-purifier-service-ludhiana': typeof WaterPurifierServiceLudhianaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aqua-guard-service-ludhiana': typeof AquaGuardServiceLudhianaRoute
+  '/areas': typeof AreasRoute
+  '/ro-repair-ludhiana': typeof RoRepairLudhianaRoute
+  '/water-purifier-service-ludhiana': typeof WaterPurifierServiceLudhianaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aqua-guard-service-ludhiana'
+    | '/areas'
+    | '/ro-repair-ludhiana'
+    | '/water-purifier-service-ludhiana'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aqua-guard-service-ludhiana'
+    | '/areas'
+    | '/ro-repair-ludhiana'
+    | '/water-purifier-service-ludhiana'
+  id:
+    | '__root__'
+    | '/'
+    | '/aqua-guard-service-ludhiana'
+    | '/areas'
+    | '/ro-repair-ludhiana'
+    | '/water-purifier-service-ludhiana'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AquaGuardServiceLudhianaRoute: typeof AquaGuardServiceLudhianaRoute
+  AreasRoute: typeof AreasRoute
+  RoRepairLudhianaRoute: typeof RoRepairLudhianaRoute
+  WaterPurifierServiceLudhianaRoute: typeof WaterPurifierServiceLudhianaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +106,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aqua-guard-service-ludhiana': {
+      id: '/aqua-guard-service-ludhiana'
+      path: '/aqua-guard-service-ludhiana'
+      fullPath: '/aqua-guard-service-ludhiana'
+      preLoaderRoute: typeof AquaGuardServiceLudhianaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas': {
+      id: '/areas'
+      path: '/areas'
+      fullPath: '/areas'
+      preLoaderRoute: typeof AreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ro-repair-ludhiana': {
+      id: '/ro-repair-ludhiana'
+      path: '/ro-repair-ludhiana'
+      fullPath: '/ro-repair-ludhiana'
+      preLoaderRoute: typeof RoRepairLudhianaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/water-purifier-service-ludhiana': {
+      id: '/water-purifier-service-ludhiana'
+      path: '/water-purifier-service-ludhiana'
+      fullPath: '/water-purifier-service-ludhiana'
+      preLoaderRoute: typeof WaterPurifierServiceLudhianaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AquaGuardServiceLudhianaRoute: AquaGuardServiceLudhianaRoute,
+  AreasRoute: AreasRoute,
+  RoRepairLudhianaRoute: RoRepairLudhianaRoute,
+  WaterPurifierServiceLudhianaRoute: WaterPurifierServiceLudhianaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
