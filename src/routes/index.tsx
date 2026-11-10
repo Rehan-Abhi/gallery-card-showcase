@@ -11,7 +11,7 @@ import { AreaChips } from "@/components/site/AreaChips";
 import {
   BUSINESS, SERVICES, PROBLEMS, FAQS, PRIMARY_TEL, SITE_URL, telHref,
 } from "@/config/business";
-import cardPhoto from "@/assets/shree-shyam-business-card.jpg.asset.json";
+import cardPhoto from "public/images/buisness_card.jpeg";
 
 const TITLE = "Water Purifier & RO Repair in Ludhiana | Shree Shyam Water Purifier";
 const DESC = "RO repair in Ludhiana at your doorstep. Aqua Guard & Aqua Fresh sales and service, alkaline RO and water filter repair. Call 91151-34662 today.";
