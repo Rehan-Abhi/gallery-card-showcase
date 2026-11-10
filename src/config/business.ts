@@ -16,7 +16,7 @@ export const BUSINESS = {
 };
 
 export const telHref = (phone: string) => `tel:+91${phone.replace(/\D/g, "")}`;
-export const PRIMARY_TEL = telHref(BUSINESS.phones[0]);
+export const PRIMARY_TEL = telHref(BUSINESS.phones[0] ?? "");
 export const WHATSAPP_HREF = `https://wa.me/${OWNER_WHATSAPP}`;
 
 export type Service = { id: string; title: string; desc: string; href?: string };
