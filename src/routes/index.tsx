@@ -106,7 +106,7 @@ function Index() {
         <SectionHeading eyebrow="Our services" title="Water purifier repair & service in Ludhiana" intro="From RO repair to Aqua Guard service in Ludhiana — sales and service under one roof." />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => {
-            const Icon = serviceIcons[i];
+            const Icon = serviceIcons[i] ?? Droplets;
             const body = (
               <>
                 <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent text-primary"><Icon className="h-6 w-6" /></span>
