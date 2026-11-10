@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://id-preview--34907d7c-28a0-4113-91b8-8aabc95481d1.lovable.app/sitemap.xml
+Sitemap: https://www.shreeshyam-ro.com/sitemap.xml

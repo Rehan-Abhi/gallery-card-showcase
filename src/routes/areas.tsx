@@ -8,7 +8,7 @@ const D = "RO repair and water purifier service across Ludhiana and nearby areas
 
 export const Route = createFileRoute("/areas")({
   head: () => ({
-    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }],
+    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { property: "og:url", content: SITE_URL + "/areas" }, { name: "twitter:card", content: "summary_large_image" }],
     links: [{ rel: "canonical", href: SITE_URL + "/areas" }],
   }),
   component: () => (

@@ -7,7 +7,7 @@ const D = "Aqua Guard service in Ludhiana and Aqua Fresh service in Ludhiana —
 
 export const Route = createFileRoute("/aqua-guard-service-ludhiana")({
   head: () => ({
-    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }],
+    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { property: "og:url", content: SITE_URL + "/aqua-guard-service-ludhiana" }, { name: "twitter:card", content: "summary_large_image" }],
     links: [{ rel: "canonical", href: SITE_URL + "/aqua-guard-service-ludhiana" }],
   }),
   component: () => (
