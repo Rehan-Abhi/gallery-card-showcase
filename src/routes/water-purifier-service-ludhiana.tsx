@@ -7,7 +7,7 @@ const D = "Water purifier service near you in Ludhiana — regular servicing, wa
 
 export const Route = createFileRoute("/water-purifier-service-ludhiana")({
   head: () => ({
-    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }],
+    meta: [{ title: T }, { name: "description", content: D }, { property: "og:title", content: T }, { property: "og:description", content: D }, { property: "og:type", content: "website" }, { property: "og:url", content: SITE_URL + "/water-purifier-service-ludhiana" }, { name: "twitter:card", content: "summary_large_image" }],
     links: [{ rel: "canonical", href: SITE_URL + "/water-purifier-service-ludhiana" }],
   }),
   component: () => (

@@ -2,7 +2,7 @@
 
 export const OWNER_WHATSAPP = "919915540690";
 
-export const SITE_URL = "https://id-preview--34907d7c-28a0-4113-91b8-8aabc95481d1.lovable.app";
+export const SITE_URL = "https://www.shreeshyam-ro.com";
 
 export const BUSINESS = {
   name: "Shree Shyam Water Purifier",
