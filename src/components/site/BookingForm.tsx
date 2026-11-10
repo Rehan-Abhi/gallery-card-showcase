@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
 import { ALL_AREAS, SERVICES } from "@/config/business";
-import { sendToWhatsApp, validateBooking, type BookingData } from "@/lib/whatsapp";
+import { buildWhatsAppMessage, validateBooking, type BookingData } from "@/lib/whatsapp";
 
 const empty: BookingData = { name: "", phone: "", area: "", service: "", problem: "" };
 const field = "h-12 w-full rounded-xl border border-input bg-background px-4 text-base outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/25";
@@ -15,7 +15,9 @@ export function BookingForm() {
     e.preventDefault();
     const errs = validateBooking(data);
     setErrors(errs);
-    if (Object.keys(errs).length === 0) sendToWhatsApp(data);
+    if (Object.keys(errs).length > 0) return;
+    const whatsappUrl = `https://wa.me/919915540690?text=${encodeURIComponent(buildWhatsAppMessage(data))}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   }
 
   const Err = ({ k }: { k: keyof BookingData }) => (errors[k] ? <p className="mt-1 text-sm text-destructive">{errors[k]}</p> : null);
